@@ -5,14 +5,14 @@ import java.time.LocalDateTime;
 public class Message {
 
 	private String message;
-	private User owner;
+	private String owner;
 	private LocalDateTime localDateTime;
 
 	public Message() {
 
 	}
 
-	public Message(String message, User owner, LocalDateTime localDateTime) {
+	public Message(String message, String owner, LocalDateTime localDateTime) {
 		this.message = message;
 		this.owner = owner;
 		this.localDateTime = localDateTime;
@@ -26,11 +26,11 @@ public class Message {
 		this.message = message;
 	}
 
-	public User getOwner() {
+	public String getOwner() {
 		return owner;
 	}
 
-	public void setOwner(User owner) {
+	public void setOwner(String owner) {
 		this.owner = owner;
 	}
 

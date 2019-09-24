@@ -9,7 +9,7 @@
     <h1>Add Message</h1>
     <div>
         <%
-            if (session != null && session.getAttribute("user") != null) { %>
+            if (session != null && session.getAttribute("username") != null) { %>
                 <a href="showMessages.jsp">Show Messages</a><br>
                 <a href="logout.jsp">Logout</a>
         <% } %>

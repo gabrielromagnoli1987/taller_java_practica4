@@ -11,7 +11,7 @@ public class AuthFilter implements Filter {
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
 		HttpServletRequest request = (HttpServletRequest) servletRequest;
 		// checks if the session and user in the session exists but it doesn't create a new one
-		if(request.getSession(false) != null && request.getSession(false).getAttribute("user") != null) {
+		if(request.getSession(false) != null && request.getSession(false).getAttribute("username") != null) {
 			filterChain.doFilter(servletRequest, servletResponse);
 		} else {
 			HttpServletResponse response = (HttpServletResponse) servletResponse;

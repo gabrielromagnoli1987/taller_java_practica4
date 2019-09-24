@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
 					.orElseThrow(UserNotFoundException::new);
 			if (user.getPassword().equals(password)){
 				HttpSession session = req.getSession();
-				session.setAttribute("user", user);
+				session.setAttribute("username", user.getName());
 				resp.sendRedirect("showMessages.jsp");
 			} else {
 				resp.sendRedirect("error.jsp");

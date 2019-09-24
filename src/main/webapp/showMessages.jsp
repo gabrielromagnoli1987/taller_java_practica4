@@ -11,7 +11,7 @@
     <h1>Messages</h1>
     <div>
         <%
-            if (session != null && session.getAttribute("user") != null) { %>
+            if (session != null && session.getAttribute("username") != null) { %>
                 <a href="logout.jsp">Logout</a><br>
                 <a href="addMessage.jsp">Add Message</a>
         <% } else { %>
